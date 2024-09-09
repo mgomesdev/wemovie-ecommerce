@@ -4,15 +4,15 @@
 
 ### Wiki
 
--   [Introdução](https://github.com/matheusgrodrigues/wemovie-ecommerce-deploy/docs/wiki/INTRODUCAO.md)
--   [Arquitetura](https://github.com/matheusgrodrigues/wemovie-ecommerce-deploy/docs/wiki/ARQUITETURA.md)
--   [Ambientes](https://github.com/matheusgrodrigues/wemovie-ecommerce-deploy/docs/wiki/AMBIENTES.md)
--   [Links Úteis](https://github.com/matheusgrodrigues/wemovie-ecommerce-deploy/docs/wiki/LINKS-UTEIS.md)
+-   [Introdução](/docs/wiki/INTRODUCAO.md)
+-   [Arquitetura](/docs/wiki/ARQUITETURA.md)
+-   [Ambientes](/docs/wiki/AMBIENTES.md)
+-   [Links Úteis](/docs/wiki/LINKS-UTEIS.md)
 
 ### Processos
 
--   [Links Úteis](https://github.com/matheusgrodrigues/wemovie-ecommerce-deploy/docs/processos/PLANEJAMENTO.md)
--   [Considerações Finais](https://github.com/matheusgrodrigues/wemovie-ecommerce-deploy/docs/processos/CONSIDERACOES-FINAIS.md)
+-   [Links Úteis](/docs/processos/PLANEJAMENTO.md)
+-   [Considerações Finais](/docs/processos/CONSIDERACOES-FINAIS.md)
 
 ### ⚡ Instalação
 
