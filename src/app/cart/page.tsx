@@ -1,7 +1,6 @@
 'use client';
 
 import { useCallback, useContext } from 'react';
-
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 
@@ -10,7 +9,6 @@ import Paragraph from '../components/atoms/Parapraph';
 import Heading from '../components/atoms/Heading';
 import Button from '../components/atoms/Button';
 import Icon from '../components/atoms/Icon';
-
 import EmptyState from '../components/organism/EmptyState';
 
 import { CartContextProvider } from '../context/CartContext';
@@ -20,7 +18,7 @@ import MovieSchema from '@/schemas/MovieSchema';
 import { formatToBRL } from '../lib/format';
 
 export default function Cart() {
-    const { removeSingleItemById, removeItemById, getUniqueItems, clearItems, getAmount, addItem, cart } =
+    const { removeSingleItemById, removeItemsById, getUniqueItems, clearItems, getAmount, addItem, cart } =
         useContext(CartContextProvider);
 
     const router = useRouter();
@@ -31,13 +29,9 @@ export default function Cart() {
     }, [clearItems, router]);
 
     const calculateSubTotal = useCallback((item: MovieSchema): number => item.price * getAmount(item.id), [getAmount]);
-
     const calculateTotal = useCallback((): number => cart.reduce((total, item) => total + item.price, 0), [cart]);
-
     const decreaseAmount = useCallback((id: number) => removeSingleItemById(id), [removeSingleItemById]);
-
-    const deleteItem = useCallback((id: number) => removeItemById(id), [removeItemById]);
-
+    const deleteItem = useCallback((id: number) => removeItemsById(id), [removeItemsById]);
     const addAmount = useCallback((movie: MovieSchema) => addItem(movie), [addItem]);
 
     return (
@@ -130,7 +124,6 @@ export default function Cart() {
                                             />
                                         </button>
 
-                                        {/* TODO: quando o componente de input estiver disponivel, substituir aqui, e remover o comentário */}
                                         <input
                                             className={`w-[3.687rem] h-[1.625rem] mx-10 text-center text-dark1 font-regular text-14 rounded border-1 border-gray`}
                                             value={`${getAmount(item.id)}`}

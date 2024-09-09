@@ -6,7 +6,7 @@ import MovieSchema from '@/schemas/MovieSchema';
 
 interface CartContextProviderProps {
     removeSingleItemById: (id: number) => void;
-    removeItemById: (id: number) => void;
+    removeItemsById: (id: number) => void;
     filterItemsById: (id: number) => MovieSchema[];
     getUniqueItems: () => MovieSchema[];
     clearItems: () => void;
@@ -37,7 +37,7 @@ export default function CartContext({ children }: CartContextProps) {
         });
     }, []);
 
-    const removeItemById = useCallback((id: number) => {
+    const removeItemsById = useCallback((id: number) => {
         setCart((prevCart) => {
             const updatedCart = prevCart.filter((item) => item.id !== id);
             return updatedCart;
@@ -66,7 +66,7 @@ export default function CartContext({ children }: CartContextProps) {
         <CartContextProvider.Provider
             value={{
                 removeSingleItemById,
-                removeItemById,
+                removeItemsById,
                 filterItemsById,
                 getUniqueItems,
                 clearItems,
