@@ -18,7 +18,7 @@
 
 1. Clone o repositório para sua máquina local usando o seguinte comando:
 
-    > git clone https://github.com/WeLearn-Academy/teste-react-matheusgrodrigues.git
+    > git clone https://github.com/matheusgrodrigues/wemovie-ecommerce-deploy.git
 
 2. Navegue até o diretório do projeto:
 
