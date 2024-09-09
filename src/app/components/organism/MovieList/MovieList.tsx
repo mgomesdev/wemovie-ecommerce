@@ -9,8 +9,8 @@ import Button from '../../atoms/Button';
 import Icon from '../../atoms/Icon';
 
 import MovieSchema from '@/schemas/MovieSchema';
-import { CartContextProvider } from '@/app/lib/context/CartContext';
-import { formatToBRL } from '@/app/lib/utils/format';
+import { CartContextProvider } from '@/app/context/CartContext';
+import { formatToBRL } from '@/app/lib/format';
 
 interface MovieList {
     movies: MovieSchema[];

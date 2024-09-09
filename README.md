@@ -2,9 +2,17 @@
 
 ![WeMovie ECommerce](docs/images/cover.png 'WeMovie ECommerce')
 
-// TODO: adicionar wiki e processos
+### Wiki
 
----
+-   [Introdução](https://github.com/WeLearn-Academy/teste-react-matheusgrodrigues/tree/master/wemovie-ecommerce/docs/wiki/INTRODUCAO.md)
+-   [Arquitetura](https://github.com/WeLearn-Academy/teste-react-matheusgrodrigues/tree/master/wemovie-ecommerce/docs/wiki/ARQUITETURA.md)
+-   [Ambientes](https://github.com/WeLearn-Academy/teste-react-matheusgrodrigues/tree/master/wemovie-ecommerce/docs/wiki/AMBIENTES.md)
+-   [Links Úteis](https://github.com/WeLearn-Academy/teste-react-matheusgrodrigues/tree/master/wemovie-ecommerce/docs/wiki/LINKS-UTEIS.md)
+
+### Processos
+
+-   [Links Úteis](https://github.com/WeLearn-Academy/teste-react-matheusgrodrigues/tree/master/wemovie-ecommerce/docs/processos/PLANEJAMENTO.md)
+-   [Considerações Finais](https://github.com/WeLearn-Academy/teste-react-matheusgrodrigues/tree/master/wemovie-ecommerce/docs/processos/CONSIDERACOES-FINAIS.md)
 
 ### ⚡ Instalação
 

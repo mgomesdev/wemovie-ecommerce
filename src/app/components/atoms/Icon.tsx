@@ -1,6 +1,6 @@
 import React from 'react';
 
-import pxToRem from '@/app/lib/utils/pxToRem';
+import pxToRem from '@/app/lib/pxToRem';
 
 type IconType = 'shopping-bag' | 'shopping-cart' | 'trash' | 'minus' | 'plus';
 

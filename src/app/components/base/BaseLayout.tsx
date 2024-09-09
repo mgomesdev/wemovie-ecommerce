@@ -8,7 +8,7 @@ import Heading from '../atoms/Heading';
 import Paragraph from '../atoms/Parapraph';
 import Icon from '../atoms/Icon';
 
-import { CartContextProvider } from '@/app/lib/context/CartContext';
+import { CartContextProvider } from '@/app/context/CartContext';
 
 interface BaseLayoutProps {
     children: React.ReactNode;

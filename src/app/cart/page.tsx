@@ -13,11 +13,11 @@ import Icon from '../components/atoms/Icon';
 
 import EmptyState from '../components/organism/EmptyState';
 
-import { CartContextProvider } from '../lib/context/CartContext';
+import { CartContextProvider } from '../context/CartContext';
 
 import MovieSchema from '@/schemas/MovieSchema';
 
-import { formatToBRL } from '../lib/utils/format';
+import { formatToBRL } from '../lib/format';
 
 export default function Cart() {
     const { removeSingleItemById, removeItemById, getUniqueItems, clearItems, getAmount, addItem, cart } =
@@ -26,19 +26,19 @@ export default function Cart() {
     const router = useRouter();
 
     const finishPurchase = useCallback(() => {
-        clearItems();
         router.push('/purchase-completed');
+        setTimeout(() => clearItems(), 30);
     }, [clearItems, router]);
 
-    const addAmount = useCallback((movie: MovieSchema) => addItem(movie), [addItem]);
+    const calculateSubTotal = useCallback((item: MovieSchema): number => item.price * getAmount(item.id), [getAmount]);
+
+    const calculateTotal = useCallback((): number => cart.reduce((total, item) => total + item.price, 0), [cart]);
 
     const decreaseAmount = useCallback((id: number) => removeSingleItemById(id), [removeSingleItemById]);
 
     const deleteItem = useCallback((id: number) => removeItemById(id), [removeItemById]);
 
-    const calculateTotal = useCallback((): number => cart.reduce((total, item) => total + item.price, 0), [cart]);
-
-    const calculateSubTotal = useCallback((item: MovieSchema): number => item.price * getAmount(item.id), [getAmount]);
+    const addAmount = useCallback((movie: MovieSchema) => addItem(movie), [addItem]);
 
     return (
         <BaseLayoutContent>

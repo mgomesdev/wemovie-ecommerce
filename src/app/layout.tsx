@@ -4,7 +4,7 @@ import { Open_Sans } from 'next/font/google';
 import './globals.css';
 
 import BaseLayout from './components/base/BaseLayout';
-import CartContext from './lib/context/CartContext';
+import CartContext from './context/CartContext';
 
 const open_sans = Open_Sans({
     variable: '--font-open-sans',
