@@ -26,7 +26,7 @@ Após o entendimento do que seria avaliado, utilizei a técnia BDD (Behavior Dri
 
 ## Projeto
 
-Após especificada as tarefas com BDD, organizei as tarefas em suas respectivas estórias, epicos e subtarefas. E após estar tudo organizado, iniciei a sprint de 7 dias.
+Após especificada as tarefas, organizei em suas respectivas estórias, epicos e subtarefas. E após estar tudo organizado, iniciei a sprint de 1 dia.
 
 ![WeMovie Ecommerce](../images/listar-2.png 'Listar')
 

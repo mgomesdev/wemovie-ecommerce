@@ -36,4 +36,5 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
+# projeto no meu github publico, não versionado, para poder fazer o deploy na versel.
 wemovie-ecommerce-deploy
