@@ -25,7 +25,7 @@ export default function Cart() {
 
     const finishPurchase = useCallback(() => {
         router.push('/purchase-completed');
-        setTimeout(() => clearItems(), 30);
+        setTimeout(() => clearItems(), 100);
     }, [clearItems, router]);
 
     const decreaseAmount = useCallback(
@@ -78,7 +78,7 @@ export default function Cart() {
 
                 {getUniqueItems().length > 0 ? (
                     getUniqueItems().map((item) => (
-                        <section className="flex gap-16 relative" key={item.id}>
+                        <div className="flex gap-16 relative" key={item.id}>
                             <Image
                                 className="w-[4rem] h-[5.125rem] md:w-[91px] md:h-[114px]"
                                 priority
@@ -184,7 +184,7 @@ export default function Cart() {
                                     }}
                                 />
                             </button>
-                        </section>
+                        </div>
                     ))
                 ) : (
                     <EmptyState />
