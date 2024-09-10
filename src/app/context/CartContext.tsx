@@ -26,9 +26,11 @@ export default function CartContext({ children }: CartContextProps) {
 
     const removeSingleItemById = useCallback((id: number) => {
         setCart((prevCart) => {
-            const index = prevCart.findIndex((item) => item.id === id);
+            const index = prevCart.findLastIndex((item) => item.id === id);
 
-            if (index === -1) return prevCart;
+            if (index === -1) {
+                return prevCart;
+            }
 
             const updatedCart = [...prevCart];
             updatedCart.splice(index, 1);
@@ -38,10 +40,7 @@ export default function CartContext({ children }: CartContextProps) {
     }, []);
 
     const removeItemsById = useCallback((id: number) => {
-        setCart((prevCart) => {
-            const updatedCart = prevCart.filter((item) => item.id !== id);
-            return updatedCart;
-        });
+        setCart((prevCart) => prevCart.filter((item) => item.id !== id));
     }, []);
 
     const filterItemsById = useCallback((id: number) => cart.filter((item) => item.id == id), [cart]);

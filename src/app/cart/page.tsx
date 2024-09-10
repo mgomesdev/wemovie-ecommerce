@@ -28,9 +28,13 @@ export default function Cart() {
         setTimeout(() => clearItems(), 30);
     }, [clearItems, router]);
 
+    const decreaseAmount = useCallback(
+        (id: number) => getAmount(id) > 1 && removeSingleItemById(id),
+        [removeSingleItemById, getAmount]
+    );
+
     const calculateSubTotal = useCallback((item: MovieSchema): number => item.price * getAmount(item.id), [getAmount]);
     const calculateTotal = useCallback((): number => cart.reduce((total, item) => total + item.price, 0), [cart]);
-    const decreaseAmount = useCallback((id: number) => removeSingleItemById(id), [removeSingleItemById]);
     const deleteItem = useCallback((id: number) => removeItemsById(id), [removeItemsById]);
     const addAmount = useCallback((movie: MovieSchema) => addItem(movie), [addItem]);
 

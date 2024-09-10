@@ -2,11 +2,7 @@
 
 import BaseLayout from './components/base/BaseLayout';
 import ErrorState from './components/organism/ErrorState';
-
-export interface GlobalErrorProps {
-    error: Error & { digest?: string };
-    reset: () => void;
-}
+import { GlobalErrorProps } from './global-error';
 
 export default function Error({ error, reset }: GlobalErrorProps) {
     return (
