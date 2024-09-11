@@ -30,7 +30,7 @@
 
 4. Crie um arquivo .env na raiz do projeto e configure as variaveis de ambiente seguindo o arquivo `.env.example` que se encontra na raiz do projeto.
 
-    - `NEXT_PUBLIC_API_URL=https://wefit-movies.vercel.app/api/movies`
+    - `NEXT_PUBLIC_API_URL=https://wefit-movies.vercel.app/api`
     - `NEXT_PUBLIC_DOMAIN=http://localhost:3000`
 
 5. Inicie um servidor local para visualizar o WeMovie ECommerce.
