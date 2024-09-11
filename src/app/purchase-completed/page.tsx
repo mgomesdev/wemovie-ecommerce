@@ -1,17 +1,24 @@
 'use client';
 
-import { useCallback } from 'react';
+import { useCallback, useContext, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import Image from 'next/image';
 
 import Paragraph from '../components/atoms/Parapraph';
 import Heading from '../components/atoms/Heading';
 import Button from '../components/atoms/Button';
+import { CartContextProvider } from '../context/CartContext';
 
 export default function PurchaseCompleted() {
+    const { clearItems } = useContext(CartContextProvider);
+
     const router = useRouter();
 
     const voltar = useCallback(() => router.push('/'), [router]);
+
+    useEffect(() => {
+        clearItems();
+    }, [clearItems]);
 
     return (
         <div className="bg-white p-64 w-full">

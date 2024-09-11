@@ -20,7 +20,7 @@ export default function MovieList({ movies }: MovieList) {
     const { addItem, filterItemsById } = useContext(CartContextProvider);
 
     return (
-        <div className="flex justify-center xl:justify-start flex-wrap gap-16">
+        <div className="flex justify-center xl:justify-start flex-wrap gap-16 mb-16 lg:mb-0">
             {movies.map((movie) => (
                 <div
                     className="bg-white w-full max-w-[21.125rem] flex flex-col items-center gap-8 p-16 rounded"

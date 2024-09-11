@@ -18,15 +18,14 @@ import MovieSchema from '@/schemas/MovieSchema';
 import { formatToBRL } from '../lib/format';
 
 export default function Cart() {
-    const { removeSingleItemById, removeItemsById, getUniqueItems, clearItems, getAmount, addItem, cart } =
+    const { removeSingleItemById, removeItemsById, getUniqueItems, getAmount, addItem, cart } =
         useContext(CartContextProvider);
 
     const router = useRouter();
 
     const finishPurchase = useCallback(() => {
         router.push('/purchase-completed');
-        setTimeout(() => clearItems(), 100);
-    }, [clearItems, router]);
+    }, [router]);
 
     const decreaseAmount = useCallback(
         (id: number) => getAmount(id) > 1 && removeSingleItemById(id),
