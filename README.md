@@ -14,6 +14,8 @@
 -   [Links Úteis](/docs/processos/PLANEJAMENTO.md)
 -   [Considerações Finais](/docs/processos/CONSIDERACOES-FINAIS.md)
 
+---
+
 ### ⚡ Instalação
 
 1. Clone o repositório para sua máquina local usando o seguinte comando:
