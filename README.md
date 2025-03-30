@@ -20,7 +20,7 @@
 
 1. Clone o repositório para sua máquina local usando o seguinte comando:
 
-    > git clone https://github.com/matheusgrodrigues/wemovie-ecommerce-deploy.git
+    > git clone https://github.com/mgomesdev/wemovie-ecommerce.git
 
 2. Navegue até o diretório do projeto:
 
